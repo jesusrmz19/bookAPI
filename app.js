@@ -9,8 +9,10 @@ app.use(cors());
 app.use(bodyParser.json());
 // IMPORT ROUTES
 const postsRoute = require('./routes/posts');
+const booksRoute = require('./routes/books');
 
 // MIDDLEWARE ROUTE
+app.use('/books', booksRoute);
 app.use('/posts', postsRoute);
 
 app.get('/', (req, res) => {
