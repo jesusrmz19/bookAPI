@@ -19,3 +19,17 @@ The API won't be open to anyone as I will be the only one capable of adding new 
 - JWT
 - Semantic HTML5
 - CSS
+
+## Example
+
+So far the data returned looks like this
+
+```json
+{
+  "_id": "616779daf636c89be955bfc4",
+  "title": "Gather Together in My Name",
+  "author": "Maya Angelou",
+  "pages": 224,
+  "__v": 0
+}
+```
