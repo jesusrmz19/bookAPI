@@ -19,6 +19,8 @@ router.post('/', async (req, res) => {
   const book = new Book({
     title: req.body.title,
     author: req.body.author,
+    pages: req.body.pages,
+    dateFinshed: req.body.dateFinshed,
   });
   try {
     const savedBook = await book.save();
