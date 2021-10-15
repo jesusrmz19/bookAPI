@@ -4,12 +4,14 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 require('dotenv/config');
 import { booksRoute } from './routes/books';
+import { authRoute } from './routes/auth';
 
 const app = express();
 app.use(cors());
 app.use(json());
 
 // MIDDLEWARE ROUTES
+app.use('/user', authRoute);
 app.use('/books', booksRoute);
 app.use('/', express.static('public'));
 
