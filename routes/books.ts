@@ -1,11 +1,9 @@
-const express = require('express');
-const Book = require('../models/Book');
+import express, { Request, Response } from 'express';
+import { Book } from '../models/Book';
+
 const router = express.Router();
 
-// ROUTES
-
-// GET ALL BOOKS
-router.get('/', async (req, res) => {
+router.get('/', async (req: Request, res: Response) => {
   try {
     const books = await Book.find();
     res.json(books);
@@ -15,12 +13,11 @@ router.get('/', async (req, res) => {
 });
 
 // SUBMIT A BOOK
-router.post('/', async (req, res) => {
+router.post('/', async (req: Request, res: Response) => {
   const book = new Book({
     title: req.body.title,
     author: req.body.author,
     pages: req.body.pages,
-    dateFinshed: req.body.dateFinshed,
   });
   try {
     const savedBook = await book.save();
@@ -30,4 +27,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export { router as booksRoute };
