@@ -20,9 +20,20 @@ router.post('/', verify, async (req: Request, res: Response) => {
     author: req.body.author,
     pages: req.body.pages,
   });
+  console.log(book);
   try {
     const savedBook = await book.save();
     res.json(savedBook);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
+
+// GET BOOK BY ID
+router.get('/:bookId', async (req: Request, res: Response) => {
+  try {
+    const book = await Book.findById(req.params.bookId);
+    res.json(book);
   } catch (err) {
     res.json({ message: err });
   }

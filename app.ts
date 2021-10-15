@@ -11,7 +11,8 @@ app.use(cors());
 app.use(json());
 
 // MIDDLEWARE ROUTES
-app.use('/user', authRoute);
+app.use('/user/api', authRoute);
+app.use('/user', express.static('public/user'));
 app.use('/books', booksRoute);
 app.use('/', express.static('public'));
 
