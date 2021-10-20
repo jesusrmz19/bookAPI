@@ -73,3 +73,13 @@ h1 {
 .form > * {
   margin-bottom: 8px;
 }
+
+.success {
+  text-align: center;
+  text-transform: uppercase;
+  display: none;
+}
+
+.success.active {
+  display: block;
+}

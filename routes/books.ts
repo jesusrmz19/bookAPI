@@ -20,10 +20,11 @@ router.post('/', verify, async (req: Request, res: Response) => {
     title: req.body.title,
     author: req.body.author,
     pages: req.body.pages,
+    dateRead: req.body.dateRead,
   });
   try {
     const savedBook = await book.save();
-    res.json(savedBook);
+    res.send({ success: 'Book Added' });
   } catch (err) {
     res.json({ message: err });
   }

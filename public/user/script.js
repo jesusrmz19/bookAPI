@@ -5,6 +5,7 @@ const URL = 'http://localhost:3000/user/api/login';
 const loginForm = document.getElementById('login_Form');
 const addBook = document.getElementById('addBook_Form');
 const addBookField = document.getElementById('addBook_Fieldset');
+const successElem = document.querySelector('.success');
 
 const submitForm = async (e) => {
   e.preventDefault();
@@ -37,8 +38,15 @@ const submitBook = async (e) => {
       credentials: 'include',
       body: JSON.stringify(data),
     });
+    const newData = await res.json();
+    if (newData.error) throw data.error;
+    if (newData.success) {
+      addBook.reset();
+      successElem.classList.add('active');
+    }
   } catch (err) {
-    console.error(err);
+    alert.error(err);
+    successElem.classList.remove('active');
   }
 };
 

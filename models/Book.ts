@@ -4,6 +4,7 @@ interface IBook {
   title: string;
   author: string;
   pages: string;
+  dateRead: string;
 }
 
 const bookSchema = new mongoose.Schema<IBook>({
@@ -16,6 +17,10 @@ const bookSchema = new mongoose.Schema<IBook>({
     required: true,
   },
   pages: {
+    type: String,
+    required: true,
+  },
+  dateRead: {
     type: String,
     required: true,
   },
