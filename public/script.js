@@ -12,7 +12,6 @@ const getBooks = async (e) => {
     const res = await fetch(`${URL}${condition}`);
     const data = await res.json();
     dataElem.innerHTML = JSON.stringify(data, undefined, 2);
-    console.log(data);
   } catch (err) {
     console.error(err);
   }
@@ -30,24 +29,3 @@ const init = async () => {
 init();
 
 bookForm.addEventListener('submit', getBooks);
-// const pElem = document.getElementById('data');
-// const getButton = document.getElementById('get_button');
-
-// const getData = async () => {
-//   const res = await fetch(URL);
-//   const data = await res.json();
-
-//   pElem.innerHTML = JSON.stringify(data, undefined, 2);
-// };
-
-// getButton.addEventListener('click', getData);
-
-// const loginBtn = document.getElementById('login_btn');
-
-// const submitForm = (e) => {
-//   e.preventDefault();
-//   console.log('click');
-// };
-
-// loginBtn.addEventListener('submit', submitForm);
-// loginBtn.addEventListener('click', submitForm);

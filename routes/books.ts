@@ -46,6 +46,16 @@ router.get('/:bookId', async (req: Request, res: Response) => {
   }
 });
 
+// GET A BOOK BY AUTHOR
+router.get('/author/:name', async (req: Request, res: Response) => {
+  try {
+    const book = await Book.find({ author: `${req.params.name}` });
+    res.json(book);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
+
 // // GET A SPECIFIC POST
 // router.get('/:postId', async (req, res) => {
 //   try {
