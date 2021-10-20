@@ -97,3 +97,16 @@ pre {
   background: #fbfbfb;
   padding: 1rem;
 }
+
+.hint_btns {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  color: rgba(0, 116, 236, 0.929412);
+}
+.hint_btns:hover {
+  background-color: rgba(187, 239, 253, 0.3);
+  text-decoration: underline;
+}

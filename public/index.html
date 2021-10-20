@@ -33,9 +33,21 @@
       <div class="form_container">
         <form class="form" id="book_form">
           <label>http://localhost:3000/books/</label>
-          <input placeholder="all" type="text" name="condition" required />
+          <input
+            id="input_name"
+            placeholder="all"
+            type="text"
+            name="condition"
+            required
+          />
           <button type="submit">GET DATA</button>
         </form>
+      </div>
+      <div class="hint">
+        <p>
+          Need a Hint? Try <button class="hint_btns">all</button>,
+          <button class="hint_btns">author/Ken Follet</button>
+        </p>
       </div>
       <pre id="data"></pre>
     </div>
