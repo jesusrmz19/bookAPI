@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 interface IBook {
   title: string;
   author: string;
-  pages: number;
+  pages: string;
 }
 
 const bookSchema = new mongoose.Schema<IBook>({
@@ -16,7 +16,7 @@ const bookSchema = new mongoose.Schema<IBook>({
     required: true,
   },
   pages: {
-    type: Number,
+    type: String,
     required: true,
   },
 });

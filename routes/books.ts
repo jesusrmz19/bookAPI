@@ -4,7 +4,8 @@ import { verify } from './verifyToken';
 
 const router = express.Router();
 
-router.get('/', async (req: Request, res: Response) => {
+// GET ALL BOOKS
+router.get('/all', async (req: Request, res: Response) => {
   try {
     const books = await Book.find();
     res.json(books);
@@ -20,13 +21,18 @@ router.post('/', verify, async (req: Request, res: Response) => {
     author: req.body.author,
     pages: req.body.pages,
   });
-  console.log(book);
   try {
     const savedBook = await book.save();
     res.json(savedBook);
   } catch (err) {
     res.json({ message: err });
   }
+  // try {
+  //   const savedBook = await book.save();
+  //   res.json(savedBook);
+  // } catch (err) {
+  //   res.json({ message: err });
+  // }
 });
 
 // GET BOOK BY ID

@@ -25,7 +25,12 @@ router.post('/login', async (req: Request, res: Response) => {
   // If everything is correct
   // Create and Assign Token
   const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
-  res.header('auth-token', token).send({ token: token });
+  res
+    .cookie('token', token, {
+      expires: new Date(Date.now() + 8 * 3600000),
+      httpOnly: true,
+    })
+    .send({ msg: 'Logged In' });
 });
 
 // REGISTER ROUTE

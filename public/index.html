@@ -8,15 +8,38 @@
     <title>Book API</title>
   </head>
   <body>
+    <header class="header">
+      <div class="logo">Book API</div>
+      <nav class="navbar">
+        <ul class="item_list">
+          <li class="item"><a href="/" class="item_link">Home</a></li>
+          <li class="item">
+            <a href="/user/index.html" class="item_link">Login</a>
+          </li>
+          <li class="item"><a href="#" class="item_link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1>Book API</h1>
-    <p>
-      This is a personal RESTful API that shows the books I've read in the year
-      2021. The purpose behind this API is to demonstrate my programming skills.
-    </p>
-    <pre id="data"></pre>
-    <div class="form_container">
-      <button id="get_button">GET DATA</button>
+    <div class="container">
+      <p class="container_description">
+        This is a personal RESTful API that shows all the books I've read in
+        2021, and eventually all I've read by year.<br />
+        The idea behind this API is to practice and show off my Node.js
+        (Express.js) and plain HTML/CSS/JS skills while keeping track of the
+        books.
+      </p>
+      <h2>Try it!</h2>
+      <div class="form_container">
+        <form class="form" id="book_form">
+          <label>http://localhost:3000/books/</label>
+          <input placeholder="all" type="text" name="condition" required />
+          <button type="submit">GET DATA</button>
+        </form>
+      </div>
+      <pre id="data"></pre>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

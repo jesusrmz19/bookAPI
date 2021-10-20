@@ -1,6 +1,7 @@
 import express from 'express';
 import { json } from 'body-parser';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
 import cors from 'cors';
 require('dotenv/config');
 import { booksRoute } from './routes/books';
@@ -9,6 +10,7 @@ import { authRoute } from './routes/auth';
 const app = express();
 app.use(cors());
 app.use(json());
+app.use(cookieParser());
 
 // MIDDLEWARE ROUTES
 app.use('/user/api', authRoute);

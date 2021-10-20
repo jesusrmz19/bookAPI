@@ -13,3 +13,87 @@ body {
   margin: 0;
   padding: 0;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.item_list {
+  display: flex;
+}
+.item_link {
+  text-decoration: none;
+  color: black;
+  padding: 0 0.8rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+.container_description {
+  text-align: center;
+  line-height: 1.5;
+  width: 80%;
+  margin: 0 auto 2rem auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.form label,
+input,
+button {
+  padding: 0.3rem 0;
+}
+
+.form label {
+  border: 1px solid #e6e6e6;
+  border-right-width: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #e6e6e6;
+  color: rgb(48, 48, 48);
+  padding-left: 0.5rem;
+}
+
+.form input {
+  width: 100%;
+  border-radius: 0;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+.form button {
+  width: 150px;
+  background: #127eed;
+  color: white;
+  outline: none;
+  border: 2px solid #127eed;
+  border-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+pre {
+  background: #fbfbfb;
+  padding: 1rem;
+}
