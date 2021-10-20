@@ -23,11 +23,7 @@ const getBooks = (e) => {
   getData(condition);
 };
 
-const init = () => {
-  getData('all');
-};
-
-init();
+getData('all');
 
 hintBtns.forEach((btn) => {
   btn.addEventListener('click', function () {
