@@ -112,43 +112,30 @@ pre {
   text-decoration: underline;
 }
 
-.example {
-  background: burlywood;
-  height: 200px;
-  width: 380px;
+.example_section {
   margin: 2rem auto;
   display: flex;
+  justify-content: space-between;
   padding: 1rem;
-  border-radius: 5px;
+  width: 600px;
+}
+.example_book {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
 }
 .example_img img {
-  height: 100%;
-}
-.example_text {
-  padding: 1rem;
+  height: 180px;
 }
 .example_text__title {
   font-weight: bold;
   margin: 0;
   margin-bottom: 8px;
-  font-size: 25px;
+  font-size: 18px;
 }
 .example_text__author {
-  font-weight: normal;
-  font-size: 18px;
-  margin: 0;
-  margin-bottom: 48px;
-}
-.example_subtext {
   font-weight: lighter;
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
-  margin-top: 48px;
-}
-.example_subtext__pages,
-.example_subtext__read {
-  margin: 0;
-}
-.example_subtext__pages {
-  margin-bottom: 4px;
+  margin-bottom: 16px;
 }
