@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev app.ts",
-    "start": "node app.js"
+    "start": "node app.ts"
   },
   "author": "Jesus Ramirez",
   "license": "ISC",
