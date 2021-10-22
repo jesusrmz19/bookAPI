@@ -111,3 +111,44 @@ pre {
   background-color: rgba(187, 239, 253, 0.3);
   text-decoration: underline;
 }
+
+.example {
+  background: burlywood;
+  height: 200px;
+  width: 380px;
+  margin: 2rem auto;
+  display: flex;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.example_img img {
+  height: 100%;
+}
+.example_text {
+  padding: 1rem;
+}
+.example_text__title {
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 25px;
+}
+.example_text__author {
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 48px;
+}
+.example_subtext {
+  font-weight: lighter;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 48px;
+}
+.example_subtext__pages,
+.example_subtext__read {
+  margin: 0;
+}
+.example_subtext__pages {
+  margin-bottom: 4px;
+}
