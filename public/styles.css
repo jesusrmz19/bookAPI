@@ -96,6 +96,7 @@ button {
 pre {
   background: #fbfbfb;
   padding: 1rem;
+  overflow-x: scroll;
 }
 
 .hint_btns {

@@ -4,16 +4,6 @@ import { verify } from './verifyToken';
 
 const router = express.Router();
 
-// GET ALL BOOKS
-router.get('/all', async (req: Request, res: Response) => {
-  try {
-    const books = await Book.find();
-    res.json(books);
-  } catch (err) {
-    res.json({ message: err });
-  }
-});
-
 // SUBMIT A BOOK
 router.post('/', verify, async (req: Request, res: Response) => {
   const book = new Book({
@@ -31,12 +21,16 @@ router.post('/', verify, async (req: Request, res: Response) => {
   } catch (err) {
     res.json({ message: err });
   }
-  // try {
-  //   const savedBook = await book.save();
-  //   res.json(savedBook);
-  // } catch (err) {
-  //   res.json({ message: err });
-  // }
+});
+
+// GET ALL BOOKS
+router.get('/all', async (req: Request, res: Response) => {
+  try {
+    const books = await Book.find();
+    res.json(books);
+  } catch (err) {
+    res.json({ message: err });
+  }
 });
 
 // GET BOOK BY ID
@@ -49,7 +43,7 @@ router.get('/:bookId', async (req: Request, res: Response) => {
   }
 });
 
-// GET A BOOK BY AUTHOR
+// GET A BOOK BY AUTHOR'S FULL NAME
 router.get('/author/:name', async (req: Request, res: Response) => {
   try {
     const book = await Book.find({ author: `${req.params.name}` });
@@ -59,15 +53,35 @@ router.get('/author/:name', async (req: Request, res: Response) => {
   }
 });
 
-// // GET A SPECIFIC POST
-// router.get('/:postId', async (req, res) => {
-//   try {
-//     const post = await Post.findById(req.params.postId);
-//     res.json(post);
-//   } catch (err) {
-//     res.json({ message: err });
-//   }
-// });
+// GET A BOOK BY AUTHOR'S FIRST NAME
+router.get('/author/firstname/:name', async (req: Request, res: Response) => {
+  try {
+    const book = await Book.find({ firstName: `${req.params.name}` });
+    res.json(book);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
+
+// GET A BOOK BY AUTHOR'S LAST NAME
+router.get('/author/lastname/:name', async (req: Request, res: Response) => {
+  try {
+    const book = await Book.find({ lastName: `${req.params.name}` });
+    res.json(book);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
+
+// GET BOOK BY YEAR READ
+router.get('/year/:year', async (req: Request, res: Response) => {
+  try {
+    const book = await Book.find({ $text: { $search: `${req.params.year}` } });
+    res.json(book);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
 
 // // DELETE A POST
 // router.delete('/:postId', async (req, res) => {
