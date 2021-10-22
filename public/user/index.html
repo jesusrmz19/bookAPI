@@ -43,7 +43,18 @@
           <form id="addBook_Form">
             <fieldset id="addBook_Fieldset" disabled class="form">
               <input type="text" placeholder="Title" name="title" required />
-              <input type="text" placeholder="Author" name="author" required />
+              <input
+                type="text"
+                placeholder="Author's First Name"
+                name="firstName"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Author's Last Name"
+                name="lastName"
+                required
+              />
               <input
                 type="number"
                 placeholder="# Pages"
@@ -54,6 +65,12 @@
                 type="text"
                 placeholder="YYYY-MM-DD"
                 name="dateRead"
+                required
+              />
+              <input
+                type="url"
+                placeholder="Book Cover Image URL"
+                name="imgUrl"
                 required
               />
               <button type="submit">Add Book</button>

@@ -5,6 +5,9 @@ interface IBook {
   author: string;
   pages: string;
   dateRead: string;
+  firstName: string;
+  lastName: string;
+  imgUrl: string;
 }
 
 const bookSchema = new mongoose.Schema<IBook>({
@@ -16,11 +19,23 @@ const bookSchema = new mongoose.Schema<IBook>({
     type: String,
     required: true,
   },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
   pages: {
     type: String,
     required: true,
   },
   dateRead: {
+    type: String,
+    required: true,
+  },
+  imgUrl: {
     type: String,
     required: true,
   },

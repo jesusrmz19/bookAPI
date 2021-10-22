@@ -18,9 +18,12 @@ router.get('/all', async (req: Request, res: Response) => {
 router.post('/', verify, async (req: Request, res: Response) => {
   const book = new Book({
     title: req.body.title,
-    author: req.body.author,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    author: `${req.body.firstName} ${req.body.lastName}`,
     pages: req.body.pages,
     dateRead: req.body.dateRead,
+    imgUrl: req.body.imgUrl,
   });
   try {
     const savedBook = await book.save();
