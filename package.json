@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "ts-node-dev app.ts",
-    "start": "node app.ts"
+    "start": "ts-node app.ts"
   },
   "author": "Jesus Ramirez",
   "license": "ISC",
