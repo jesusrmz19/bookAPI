@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/app.ts",
-    "postinstall": "tsc && mv -i -v public dist/",
+    "postinstall": "tsc",
     "build": "npm run postinstall && npm run start",
     "start": "node dist/app.js"
   },
