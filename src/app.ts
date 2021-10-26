@@ -6,6 +6,7 @@ import cors from 'cors';
 require('dotenv/config');
 import { booksRoute } from './routes/books';
 import { authRoute } from './routes/auth';
+import path from 'path';
 
 const app = express();
 app.use(cors());
@@ -14,7 +15,7 @@ app.use(cookieParser());
 
 // MIDDLEWARE ROUTES
 app.use('/user/api', authRoute);
-app.use('/user', express.static('public/user'));
+app.use('/user', express.static('./public/user'));
 app.use('/books', booksRoute);
 app.use('/', express.static('public'));
 

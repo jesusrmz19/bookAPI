@@ -3,15 +3,14 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "target": "es6",
-    "rootDir": "./",
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
+    "rootDir": "src",
+    "outDir": "dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
