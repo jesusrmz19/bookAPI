@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { json } from 'body-parser';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
@@ -18,6 +18,9 @@ app.use('/user/api', authRoute);
 app.use('/user', express.static('./public/user'));
 app.use('/books', booksRoute);
 app.use('/', express.static('public'));
+app.use(function (req: Request, res: Response, next) {
+  res.status(404).send("This page doesn't exists!");
+});
 
 const PORT = process.env.PORT || 3000;
 
@@ -27,5 +30,5 @@ mongoose.connect(process.env.DB_CONNECTION, () => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server ir running in ${PORT}`);
+  console.log(`Server is running in ${PORT}`);
 });
