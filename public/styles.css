@@ -81,6 +81,7 @@ button {
   border-radius: 0;
   border: 2px solid rgba(0, 0, 0, 0.25);
   outline: none;
+  padding-left: 0.5rem;
 }
 .form button {
   width: 150px;
@@ -153,6 +154,11 @@ pre {
   .form label,
   .form input {
     width: 280px;
+  }
+  .form label {
+    border-right-width: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
   .form button {
     border-radius: 0px;

@@ -1,7 +1,6 @@
 'use strict';
 
-// const URL = 'https://jrmbookapi.herokuapp.com/books/';
-const URL = 'http://localhost:3000/books/';
+const URL = 'https://jrmbookapi.herokuapp.com/books/';
 const dataElem = document.getElementById('data');
 const bookForm = document.getElementById('book_form');
 const hintBtns = document.querySelectorAll('.hint_btns');
