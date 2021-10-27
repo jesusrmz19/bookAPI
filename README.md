@@ -54,7 +54,7 @@ The returned data looks like this:
 The API link is https://jrmbookapi.herokuapp.com/books/:
 
 - All Books: https://jrmbookapi.herokuapp.com/books/all
-- Book by Author Full Name: https://jrmbookapi.herokuapp.com/books/author/Ken Follet
+- Book by Author Full Name: https://jrmbookapi.herokuapp.com/books/author/Ken%20Follet
 - Book by Author First Name: https://jrmbookapi.herokuapp.com/books/author/firstname/Maya
 - Book by Author Last Name: https://jrmbookapi.herokuapp.com/books/author/lastname/John
 
