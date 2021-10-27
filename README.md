@@ -6,30 +6,60 @@ This is a personal RESTful API that will let me add, delete, and update the book
 
 ### The Challenge
 
-The initial challenge is to create a RESTful API using by learning and using new technologies like Node.js, Express, JWT, among others.
+The initial challenge is to create a RESTful API by learning and using new technologies like Node.js, Express, JWT, and Typescript.
 
-The API won't be open to anyone as I will be the only one capable of adding new content or update the current one.
+The API won't be open to anyone as I will be the only one capable of adding new content or update the current one. But as a user you will be able to get the JSON data as the example shows below.
+
+### Links
+
+- Live Site URL: [https://jrmbookapi.herokuapp.com/](https://jrmbookapi.herokuapp.com/)
 
 ## Process
 
 ### Built with
 
+**Backend**
+
 - Node.js
 - Express
 - JWT
-- Semantic HTML5
+- TypeScript
+
+**Frontend**
+
+- HTML5
 - CSS
+- JavaScript
 
 ## Example
 
-So far the data returned looks like this
+The returned data looks like this:
 
 ```json
 {
-  "_id": "616779daf636c89be955bfc4",
-  "title": "Gather Together in My Name",
-  "author": "Maya Angelou",
-  "pages": 224,
+  "_id": "617201f878b8cb2f1fa4d089",
+  "title": "Me",
+  "author": "Elton John",
+  "firstName": "Elton",
+  "lastName": "John",
+  "pages": "300",
+  "dateRead": "2021-03-30",
+  "imgUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553526563l/44303730.jpg",
   "__v": 0
 }
 ```
+
+## How to use it?
+
+The API link is https://jrmbookapi.herokuapp.com/books/:
+
+- All Books: https://jrmbookapi.herokuapp.com/books/all
+- Book by Author Full Name: https://jrmbookapi.herokuapp.com/books/author/Ken Follet
+- Book by Author First Name: https://jrmbookapi.herokuapp.com/books/firstname/Maya
+- Book by Author Last Name: https://jrmbookapi.herokuapp.com/books/lastname/John
+
+## Author
+
+- Website - [jesusrmz.com](https://jesusrmz.com/)
+- Twitter - [@jesusrmz\_](https://twitter.com/jesusrmz_)
+- CodePen - [@jesusrmz](https://codepen.io/jesusrmz)
