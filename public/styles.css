@@ -139,3 +139,32 @@ pre {
   margin: 0;
   margin-bottom: 16px;
 }
+
+@media (max-width: 420px) {
+  .container {
+    width: 100%;
+  }
+  .container_description {
+    width: 90%;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .form label,
+  .form input {
+    width: 280px;
+  }
+  .form button {
+    border-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .hint {
+    text-align: center;
+  }
+  .example_section {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+} ;

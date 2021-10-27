@@ -83,3 +83,13 @@ h1 {
 .success.active {
   display: block;
 }
+
+@media (max-width: 420px) {
+  .sections_container {
+    flex-direction: column;
+  }
+  .login,
+  .addbook {
+    width: 100%;
+  }
+} ;
