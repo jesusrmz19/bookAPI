@@ -13,6 +13,7 @@ router.post('/', verify, async (req: Request, res: Response) => {
     author: `${req.body.firstName} ${req.body.lastName}`,
     pages: req.body.pages,
     dateRead: req.body.dateRead,
+    year: req.body.dateRead.slice(0, 4),
     imgUrl: req.body.imgUrl,
   });
   try {
@@ -76,8 +77,8 @@ router.get('/author/lastname/:name', async (req: Request, res: Response) => {
 // GET BOOK BY YEAR READ
 router.get('/year/:year', async (req: Request, res: Response) => {
   try {
-    const book = await Book.find({ $text: { $search: `${req.params.year}` } });
-    res.json(book);
+    const books = await Book.find({ year: `${req.params.year}` });
+    res.json(books);
   } catch (err) {
     res.json({ message: err });
   }

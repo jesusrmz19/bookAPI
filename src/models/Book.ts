@@ -5,6 +5,7 @@ interface IBook {
   author: string;
   pages: string;
   dateRead: string;
+  year: string;
   firstName: string;
   lastName: string;
   imgUrl: string;
@@ -32,6 +33,10 @@ const bookSchema = new mongoose.Schema<IBook>({
     required: true,
   },
   dateRead: {
+    type: String,
+    required: true,
+  },
+  year: {
     type: String,
     required: true,
   },
