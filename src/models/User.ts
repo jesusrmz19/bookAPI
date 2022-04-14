@@ -28,4 +28,6 @@ const userSchema = new mongoose.Schema<IUser>({
 
 const User = mongoose.model('User', userSchema);
 
+/* current password is db */
+
 export { User };

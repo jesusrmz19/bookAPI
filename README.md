@@ -1,6 +1,6 @@
 # Book API
 
-This is a personal RESTful API that will let me add, delete, and update the books I've read in 2021.
+This is a personal RESTful API that will let me add, delete, and update the books I've read in 2021 and 2022.
 
 ## Overview
 
